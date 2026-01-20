@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inaruwa Delivery - Discover the best foods and drinks in Vintage">
+    <meta name="keywords" content="food delivery, restaurants, vintage, inaruwa">
+    <title>Inaruwa Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="img/logo.png" alt="Inaruwa Delivery Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="login-link">Login</a></li>
+                    <li><a href="#" id="signup-link">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-center">
+                <img class="hero-logo" src="img/logo_2.png" alt="Inaruwa Delivery">
+                <div class="search-container">
+                    <div class="search-wrap">
+                        <input id="searchInput" type="text" placeholder="Search for restaurants and foods" aria-label="Search for restaurants and foods">
+                    </div>
+                    <div class="search-actions">
+                        <button id="searchBtn" class="btn" type="button">Search</button>
+                    </div>
+                </div>
+                <p class="hero-tagline">Discover the best foods and drinks in Vintage</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-grid">
+            <article class="card delivery">
+                <div class="thumb"></div>
+                <h3>Fast Delivery</h3>
+                <p>Get your favorite meals delivered to your doorstep in under 30 minutes.</p>
+                <div class="kv">
+                    <span class="badge">Speed</span>
+                </div>
+            </article>
+            <article class="card variety">
+                <div class="thumb"></div>
+                <h3>Wide Variety</h3>
+                <p>Choose from dozens of restaurants offering cuisines from around the world.</p>
+                <div class="kv">
+                    <span class="badge">Choice</span>
+                </div>
+            </article>
+            <article class="card offer">
+                <div class="thumb"></div>
+                <h3>Exclusive Offers</h3>
+                <p>Enjoy discounts, combo deals, and special promotions every week.</p>
+                <div class="kv">
+                    <span class="badge">Deals</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Restaurants Section -->
+        <section class="restaurants-grid" id="restaurants-section">
+            <!-- Cards will be dynamically injected here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Inaruwa Delivery. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Authentication -->
+    <div id="auth-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+            <h2 id="modal-title">Login</h2>
+            <form id="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required aria-describedby="email-error">
+                    <span id="email-error" class="error-message" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" required aria-describedby="password-error">
+                    <span id="password-error" class="error-message" aria-live="polite"></span>
+                </div>
+                <div class="actions">
+                    <button type="button" id="close-modal" class="btn-secondary">Close</button>
+                    <button type="submit" class="btn">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast" style="display: none;"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
